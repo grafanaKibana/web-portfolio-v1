@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-Legacy personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. This Angular site lives at https://oldreshetnik.vercel.app; the current portfolio is at https://reshetnik.dev.
+Legacy personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. Its intended custom deployment address and canonical origin are https://old.reshetnik.dev; https://oldreshetnik.vercel.app is the working fallback until cutover. The current portfolio is at https://reshetnik.dev. Configure the legacy custom domain and verify HTTPS before deploying this origin change.
 
 ## STRUCTURE
 

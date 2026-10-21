@@ -2,7 +2,7 @@
 import { Injectable, inject, DOCUMENT } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
-const BASE_URL = 'https://reshetnik.vercel.app';
+const BASE_URL = 'https://old.reshetnik.dev';
 const DEFAULT_IMAGE = `${BASE_URL}/assets/images/my-portrait.png`;
 const DEFAULT_DESCRIPTION =
   'Nikita Reshetnik | Senior AI Engineer at DraftKings. 5+ years building .NET microservices and LLM-powered services. Kyiv, Ukraine.';
