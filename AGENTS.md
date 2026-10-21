@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-Personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. Live at reshetnik.vercel.app.
+Legacy personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. Its deployment address and canonical origin are https://old.reshetnik.dev. The current portfolio is at https://reshetnik.dev.
 
 ## STRUCTURE
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reshetnik.vercel.app/sitemap.xml
+Sitemap: https://old.reshetnik.dev/sitemap.xml

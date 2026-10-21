@@ -45,7 +45,7 @@ describe('SeoService', () => {
     expect(meta.getTag('name="description"')?.content).toBe('Custom description');
     expect(meta.getTag('property="og:title"')?.content).toBe('My Page');
     expect(meta.getTag('property="og:description"')?.content).toBe('Custom description');
-    expect(meta.getTag('property="og:url"')?.content).toBe('https://reshetnik.vercel.app/blog');
+    expect(meta.getTag('property="og:url"')?.content).toBe('https://old.reshetnik.dev/blog');
     expect(meta.getTag('property="og:type"')?.content).toBe('article');
     expect(meta.getTag('property="og:image"')?.content).toBe('https://example.com/image.png');
     expect(meta.getTag('name="twitter:title"')?.content).toBe('My Page');
@@ -56,10 +56,11 @@ describe('SeoService', () => {
   it('should use default values when optional config is omitted', () => {
     service.updatePageMeta({ title: 'Minimal' });
 
-    expect(meta.getTag('property="og:url"')?.content).toBe('https://reshetnik.vercel.app/');
+    expect(meta.getTag('property="og:url"')?.content).toBe('https://old.reshetnik.dev/');
     expect(meta.getTag('property="og:type"')?.content).toBe('website');
     expect(meta.getTag('name="description"')?.content).toContain('Nikita Reshetnik');
-    expect(meta.getTag('property="og:image"')?.content).toContain('my-portrait.png');
+    expect(meta.getTag('property="og:image"')?.content).toBe('https://old.reshetnik.dev/assets/images/my-portrait.png');
+    expect(meta.getTag('name="twitter:image"')?.content).toBe('https://old.reshetnik.dev/assets/images/my-portrait.png');
   });
 
   it('should create canonical link if none exists', () => {
@@ -67,7 +68,7 @@ describe('SeoService', () => {
 
     const canonical = doc.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     expect(canonical).toBeTruthy();
-    expect(canonical?.href).toContain('https://reshetnik.vercel.app/blog');
+    expect(canonical?.href).toContain('https://old.reshetnik.dev/blog');
   });
 
   it('should update existing canonical link', () => {
@@ -76,6 +77,6 @@ describe('SeoService', () => {
 
     const canonicals = doc.querySelectorAll('link[rel="canonical"]');
     expect(canonicals.length).toBe(1);
-    expect((canonicals[0] as HTMLLinkElement).href).toContain('https://reshetnik.vercel.app/about');
+    expect((canonicals[0] as HTMLLinkElement).href).toContain('https://old.reshetnik.dev/about');
   });
 });
