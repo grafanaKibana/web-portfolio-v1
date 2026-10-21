@@ -2,7 +2,7 @@
 
 Personal CV / portfolio website built with Angular 18. Features an animated WebGL gradient background, a markdown-powered blog, and data-driven resume sections — all wrapped in a polished dark-themed UI.
 
-**Live**: [reshetnik.vercel.app](https://reshetnik.vercel.app) · **Repo**: [github.com/grafanaKibana/web-portfolio-v1](https://github.com/grafanaKibana/web-portfolio-v1)
+**Current portfolio**: [reshetnik.dev](https://reshetnik.dev) · **Repo**: [github.com/grafanaKibana/web-portfolio-v1](https://github.com/grafanaKibana/web-portfolio-v1)
 
 ![Screenshot](screenshot-full.png)
 
