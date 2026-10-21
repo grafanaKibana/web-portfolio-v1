@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-Legacy personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. The current portfolio is at https://reshetnik.dev.
+Legacy personal CV/portfolio site — Angular 18 standalone components, TypeScript 5.5, SCSS, custom WebGL gradient background, markdown blog. This Angular site lives at https://oldreshetnik.vercel.app; the current portfolio is at https://reshetnik.dev.
 
 ## STRUCTURE
 
