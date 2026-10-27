@@ -6,7 +6,11 @@ Personal CV / portfolio website built with Angular 18. Features an animated WebG
 
 The legacy Angular site's canonical URLs, sharing metadata, and sitemap target `https://old.reshetnik.dev`.
 
-![Screenshot](screenshot-full.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/product-captures/hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/product-captures/hero.png">
+  <img src="docs/assets/product-captures/hero.png" alt="Product overview">
+</picture>
 
 ## Features
 
@@ -86,3 +90,5 @@ npm run test:watch    # watch mode
 ## Customization
 
 All resume content lives in [`src/assets/data/home-data.json`](src/assets/data/home-data.json) — edit it to make the site yours. Blog posts go in `src/assets/data/blog/posts/` as Markdown files with YAML front matter.
+
+[Regenerate product images](docs/product-captures.md)

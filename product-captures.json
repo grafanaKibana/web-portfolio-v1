@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "project": {
+    "id": "portfolio-v1",
+    "title": "Legacy Portfolio",
+    "subtitle": "",
+    "background": "#fcfcfb",
+    "accent": "#5b6eaa",
+    "backgroundStyle": "solid",
+    "artDirection": "porcelain",
+    "layout": "desktop-centered",
+    "imageZoom": 1,
+    "darkBackground": "#11161b",
+    "ink": "#252527",
+    "imageOffsetX": 0,
+    "siteBackdrop": true,
+    "siteTint": "#dfe5f1",
+    "edgeBleed": 0.06,
+    "fadeStart": 0.4,
+    "fadeEnd": 0.9,
+    "blurStart": 0.38
+  },
+  "outputDir": "docs/assets/product-captures",
+  "captures": [
+    {
+      "id": "overview-light",
+      "provider": "web",
+      "url": "/?intro=0",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "colorScheme": "light",
+      "fallback": "docs/assets/product-captures/captures/overview-light.png",
+      "ready": {
+        "selector": "app-root",
+        "expression": "!document.querySelector('.intro') && !document.documentElement.classList.contains('intro-prehide')"
+      },
+      "localStorage": {
+        "webcv.themeName.v1": "Cupertino Aurora"
+      },
+      "styles": "canvas{animation:none!important}"
+    },
+    {
+      "id": "overview-dark",
+      "provider": "web",
+      "url": "/?intro=0",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "colorScheme": "dark",
+      "fallback": "docs/assets/product-captures/captures/overview-dark.png",
+      "ready": {
+        "selector": "app-root",
+        "expression": "!document.querySelector('.intro') && !document.documentElement.classList.contains('intro-prehide')"
+      },
+      "localStorage": {
+        "webcv.themeName.v1": "Deep Purple"
+      },
+      "styles": "canvas{animation:none!important}"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hero",
+      "template": "showcase",
+      "captures": [
+        "overview-light"
+      ],
+      "width": 1600,
+      "height": 1200,
+      "layout": "desktop-centered",
+      "theme": "light",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "hero-dark",
+      "template": "showcase",
+      "captures": [
+        "overview-dark"
+      ],
+      "width": 1600,
+      "height": 1200,
+      "layout": "desktop-centered",
+      "theme": "dark",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "themes",
+      "template": "showcase",
+      "captures": [
+        "overview-light"
+      ],
+      "width": 1600,
+      "height": 1000,
+      "layout": "desktop-centered",
+      "theme": "light",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "themes-dark",
+      "template": "showcase",
+      "captures": [
+        "overview-dark"
+      ],
+      "width": 1600,
+      "height": 1000,
+      "layout": "desktop-centered",
+      "theme": "dark",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "social",
+      "template": "showcase",
+      "captures": [
+        "overview-light"
+      ],
+      "width": 1200,
+      "height": 900,
+      "layout": "desktop-centered",
+      "theme": "light",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "social-dark",
+      "template": "showcase",
+      "captures": [
+        "overview-dark"
+      ],
+      "width": 1200,
+      "height": 900,
+      "layout": "desktop-centered",
+      "theme": "dark",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "centered",
+      "template": "showcase",
+      "layout": "desktop-centered",
+      "captures": [
+        "overview-light"
+      ],
+      "width": 1600,
+      "height": 1200,
+      "theme": "light",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    },
+    {
+      "id": "centered-dark",
+      "template": "showcase",
+      "layout": "desktop-centered",
+      "captures": [
+        "overview-dark"
+      ],
+      "width": 1600,
+      "height": 1200,
+      "theme": "dark",
+      "capturesByTheme": {
+        "light": [
+          "overview-light"
+        ],
+        "dark": [
+          "overview-dark"
+        ]
+      }
+    }
+  ],
+  "prepare": {
+    "command": "npm ci --cache .product-captures-cache/npm && npm run build",
+    "timeoutMs": 600000
+  },
+  "server": {
+    "command": "node .github/actions/product-captures/serve.mjs --dir dist/web-portfolio-v1/browser --port 4185",
+    "url": "http://127.0.0.1:4185",
+    "timeoutMs": 60000
+  }
+}
