@@ -91,4 +91,4 @@ npm run test:watch    # watch mode
 
 All resume content lives in [`src/assets/data/home-data.json`](src/assets/data/home-data.json) — edit it to make the site yours. Blog posts go in `src/assets/data/blog/posts/` as Markdown files with YAML front matter.
 
-[Regenerate product images](docs/product-captures.md)
+[Regenerate product images](https://github.com/grafanaKibana/product-captures#configuration)
