@@ -220,7 +220,7 @@
     "timeoutMs": 600000
   },
   "server": {
-    "command": "node .github/actions/product-captures/serve.mjs --dir dist/web-portfolio-v1/browser --port 4185",
+    "command": "node \"$PRODUCT_CAPTURE_TOOL_ROOT/serve.mjs\" --dir dist/web-portfolio-v1/browser --port 4185",
     "url": "http://127.0.0.1:4185",
     "timeoutMs": 60000
   }
