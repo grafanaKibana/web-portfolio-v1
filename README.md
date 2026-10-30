@@ -1,12 +1,16 @@
-# web-portfolio-v1
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/product-captures/hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/product-captures/hero.png">
+  <img src="docs/assets/product-captures/hero.png" alt="Product overview">
+</picture>
 
+<p align="center">
 Personal CV / portfolio website built with Angular 18. Features an animated WebGL gradient background, a markdown-powered blog, and data-driven resume sections — all wrapped in a polished dark-themed UI.
+</p>
 
 **Current portfolio**: [reshetnik.dev](https://reshetnik.dev) · **Legacy portfolio**: [old.reshetnik.dev](https://old.reshetnik.dev) · **Repo**: [github.com/grafanaKibana/web-portfolio-v1](https://github.com/grafanaKibana/web-portfolio-v1)
 
 The legacy Angular site's canonical URLs, sharing metadata, and sitemap target `https://old.reshetnik.dev`.
-
-![Screenshot](screenshot-full.png)
 
 ## Features
 

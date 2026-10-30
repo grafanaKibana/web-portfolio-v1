@@ -1,0 +1,28 @@
+{
+  "name": "Legacy Portfolio",
+  "appearance": {
+    "layout": "centered",
+    "darkBackground": "#11161b",
+    "fadeStart": 0.4,
+    "fadeEnd": 0.9,
+    "blurStart": 0.38,
+    "tint": "#dfe5f1"
+  },
+  "capture": {
+    "url": "/?intro=0",
+    "ready": "app-root",
+    "waitFor": "!document.querySelector('.intro') && !document.documentElement.classList.contains('intro-prehide')",
+    "css": "canvas{animation:none!important}",
+    "storage": {
+      "webcv.themeName.v1": {
+        "light": "Cupertino Aurora",
+        "dark": "Deep Purple"
+      }
+    }
+  },
+  "build": "npm ci --cache .product-captures-cache/npm && npm run build",
+  "server": {
+    "directory": "dist/web-portfolio-v1/browser",
+    "port": 4185
+  }
+}
