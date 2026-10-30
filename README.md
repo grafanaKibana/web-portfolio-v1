@@ -47,4 +47,4 @@ Change [home-data.json](src/assets/data/home-data.json) for profile details, res
 
 - [Responsive styling guide](src/assets/styles/README.md) — Breakpoints, layout mixins, and responsive utilities.
 
-[Report an issue](https://github.com/grafanaKibana/web-portfolio-v1/issues) | [Contributing](https://github.com/grafanaKibana/web-portfolio-v1/pulls) | License: not specified.
+[Report an issue](https://github.com/grafanaKibana/web-portfolio-v1/issues) | [Contributing](https://github.com/grafanaKibana/web-portfolio-v1/pulls)
