@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/product-captures/hero-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="docs/assets/product-captures/hero.png">
-  <img src="docs/assets/product-captures/hero.png" alt="Product overview">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grafanaKibana/web-portfolio-v1/HEAD/docs/assets/product-captures/hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grafanaKibana/web-portfolio-v1/HEAD/docs/assets/product-captures/hero.png">
+  <img src="https://raw.githubusercontent.com/grafanaKibana/web-portfolio-v1/HEAD/docs/assets/product-captures/hero.png" alt="Product overview">
 </picture>
 
 <p align="center">
