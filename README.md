@@ -5,88 +5,46 @@
 </picture>
 
 <p align="center">
-Personal CV / portfolio website built with Angular 18. Features an animated WebGL gradient background, a markdown-powered blog, and data-driven resume sections — all wrapped in a polished dark-themed UI.
+Personal portfolio built with Angular, with an animated WebGL background, a Markdown blog, and data-driven resume sections.
 </p>
 
-**Current portfolio**: [reshetnik.dev](https://reshetnik.dev) · **Legacy portfolio**: [old.reshetnik.dev](https://old.reshetnik.dev) · **Repo**: [github.com/grafanaKibana/web-portfolio-v1](https://github.com/grafanaKibana/web-portfolio-v1)
+<p align="center">
+<a href="https://old.reshetnik.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Legacy_site.svg?variant=default&amp;size=sm&amp;font=geist&amp;mode=dark&amp;logo=ri%3ALuArrowUpRight&amp;color=84cc16&amp;logoColor=0e100f&amp;valueColor=0e100f&amp;labelTextColor=0e100f&amp;gradient=84cc16%2C95d133%2C110"><img alt="Legacy site" src="https://shieldcn.dev/badge/Legacy_site.svg?variant=default&amp;size=sm&amp;font=geist&amp;mode=light&amp;logo=ri%3ALuArrowUpRight&amp;color=437100&amp;logoColor=ffffff&amp;valueColor=ffffff&amp;labelTextColor=ffffff&amp;gradient=437100%2C4c7a10%2C110"></picture></a>
+</p>
 
-The legacy Angular site's canonical URLs, sharing metadata, and sitemap target `https://old.reshetnik.dev`.
+A personal portfolio with a section-based resume, technical articles, and an animated WebGL background. Resume content comes from JSON, while blog posts are authored in Markdown.
 
-## Features
+## Get started
 
-- **WebGL gradient background** — animated mesh gradient with parallax, dynamic color themes, and real-time UI reflections
-- **Intro overlay** — typewriter-style intro sequence on first visit (skippable, respects `prefers-reduced-motion`)
-- **Data-driven content** — all resume data (experience, education, skills, sidebar info) loaded from a single JSON config
-- **Markdown blog** — blog posts authored in Markdown with YAML front matter, syntax highlighting via highlight.js
-- **CV download** — fetches the latest PDF from a [LaTeX CV repo](https://github.com/grafanaKibana/LatexCV) via GitHub Actions artifacts
-- **Route animations** — smooth page transitions between Home, Blog, and Portfolio
-- **Responsive design** — mobile-friendly layout with SCSS mixins and media queries
+Browse Home for experience, education, skills, and contact links. The Blog lists technical articles, each with its own `/blog/:slug` URL and highlighted code blocks.
 
-## Tech Stack
+The CV download retrieves a PDF from the LaTeX CV repository’s GitHub Actions artifacts. Download availability depends on that external artifact.
 
-| Layer | Technology |
-|---|---|
-| Framework | Angular 18 (NgModules) |
-| Language | TypeScript 5.5 |
-| Styling | SCSS, Angular Material, FontAwesome |
-| Graphics | Custom WebGL gradient renderer |
-| Blog | Markdown (`marked`), highlight.js |
-| Testing | Jest, jest-preset-angular |
-| Analytics | Vercel Analytics, Vercel Speed Insights |
-| Node | 22 (see `.nvmrc`) |
+## Local setup
 
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── pages/
-│   │   ├── home/           # About, Experience, Education, Skills sections
-│   │   ├── blog/           # Blog listing, detail page, markdown parser
-│   │   └── portfolio/      # Portfolio page (WIP)
-│   ├── shared/             # Header, Footer, Sidebar, WebGL background, Intro overlay
-│   ├── services/           # Home data, CV download, WebGL gradient, dynamic reflections
-│   └── config/             # WebGL configuration
-├── assets/
-│   ├── data/
-│   │   ├── home-data.json  # All resume content
-│   │   └── blog/           # Blog posts (Markdown + images)
-│   ├── images/
-│   └── styles/             # Global SCSS variables, mixins, typography
-└── environments/
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 22 (`nvm use` if you have nvm)
-- Angular CLI (`npm install -g @angular/cli`)
-
-### Install & Run
+Use Node.js 22 and npm. The project includes its own Angular CLI.
 
 ```bash
-npm install
-ng serve
+npm ci
+npm start
 ```
 
-Open [http://localhost:4200](http://localhost:4200).
+Open [localhost:4200](http://localhost:4200). Run `npm run build` for a production build or `npm test` for Jest. The test script includes Node’s experimental VM modules flag.
 
-### Build
+## How it works
 
-```bash
-ng build
-```
+Angular standalone components render the resume sections from one cached JSON request. The blog reads a Markdown registry, loads the listed posts, parses their metadata, and sorts them by publication date.
 
-Production artifacts go to `dist/web-portfolio-v1/`.
+The WebGL background supplies colors to CSS custom properties used by the glass reflections. Palettes, animation settings, and reflection tuning share [webgl.config.ts](src/app/config/webgl.config.ts). A CSS gradient is used when WebGL is unavailable.
 
-### Test
+The opening introduction supports Space or Escape to skip, remembers completion for the browser session, and bypasses the sequence for reduced-motion preferences.
 
-```bash
-npm test              # single run
-npm run test:watch    # watch mode
-```
+## Update content
 
-## Customization
+Change [home-data.json](src/assets/data/home-data.json) for profile details, resume sections, and header flags. Add Markdown under [blog posts](src/assets/data/blog/posts/) and list its path in [index.md](src/assets/data/blog/index.md). Use an existing post as the metadata example.
 
-All resume content lives in [`src/assets/data/home-data.json`](src/assets/data/home-data.json) — edit it to make the site yours. Blog posts go in `src/assets/data/blog/posts/` as Markdown files with YAML front matter.
+## Guides
+
+- [Responsive styling guide](src/assets/styles/README.md) — Breakpoints, layout mixins, and responsive utilities.
+
+[Report an issue](https://github.com/grafanaKibana/web-portfolio-v1/issues) | [Contributing](https://github.com/grafanaKibana/web-portfolio-v1/pulls)
