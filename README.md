@@ -10,9 +10,9 @@ Personal portfolio built with Angular, with an animated WebGL background, a Mark
 
 <p align="center">
 <a href="https://old.reshetnik.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Legacy_site.svg?variant=default&amp;size=sm&amp;font=geist&amp;mode=dark&amp;logo=ri%3ALuArrowUpRight&amp;color=84cc16&amp;logoColor=0e100f&amp;valueColor=0e100f&amp;labelTextColor=0e100f&amp;gradient=84cc16%2C95d133%2C110"><img alt="Legacy site" src="https://shieldcn.dev/badge/Legacy_site.svg?variant=default&amp;size=sm&amp;font=geist&amp;mode=light&amp;logo=ri%3ALuArrowUpRight&amp;color=437100&amp;logoColor=ffffff&amp;valueColor=ffffff&amp;labelTextColor=ffffff&amp;gradient=437100%2C4c7a10%2C110"></picture></a>
+<a href="https://github.com/grafanaKibana/web-portfolio-v1/issues"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Report_an_issue.svg?variant=outline&amp;size=sm&amp;font=geist&amp;mode=dark&amp;logo=ri%3ALuBug&amp;gradient=18181b%2C18181b%2C90&amp;logoColor=fafafa&amp;labelTextColor=fafafa"><img alt="Report an issue" src="https://shieldcn.dev/badge/Report_an_issue.svg?variant=outline&amp;size=sm&amp;font=geist&amp;mode=light&amp;logo=ri%3ALuBug&amp;gradient=fafafa%2Cfafafa%2C90&amp;logoColor=18181b&amp;labelTextColor=18181b" style="display:inline-block;margin:0;vertical-align:middle"></picture></a>
+<a href="https://github.com/grafanaKibana/web-portfolio-v1/pulls"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Contributing.svg?variant=outline&amp;size=sm&amp;font=geist&amp;mode=dark&amp;logo=ri%3ALuGitPullRequest&amp;gradient=18181b%2C18181b%2C90&amp;logoColor=fafafa&amp;labelTextColor=fafafa"><img alt="Contributing" src="https://shieldcn.dev/badge/Contributing.svg?variant=outline&amp;size=sm&amp;font=geist&amp;mode=light&amp;logo=ri%3ALuGitPullRequest&amp;gradient=fafafa%2Cfafafa%2C90&amp;logoColor=18181b&amp;labelTextColor=18181b" style="display:inline-block;margin:0;vertical-align:middle"></picture></a>
 </p>
-
-A personal portfolio with a section-based resume, technical articles, and an animated WebGL background. Resume content comes from JSON, while blog posts are authored in Markdown.
 
 ## Get started
 
@@ -46,5 +46,3 @@ Change [home-data.json](src/assets/data/home-data.json) for profile details, res
 ## Guides
 
 - [Responsive styling guide](src/assets/styles/README.md) — Breakpoints, layout mixins, and responsive utilities.
-
-[Report an issue](https://github.com/grafanaKibana/web-portfolio-v1/issues) | [Contributing](https://github.com/grafanaKibana/web-portfolio-v1/pulls)
